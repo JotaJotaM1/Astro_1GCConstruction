@@ -1,7 +1,25 @@
 ---
+import TabsNavegation from "../components/TabsNavegation";
+import CtaAll from '../components/CtaAll';
+import "../style/pages/services.css";
 import Layout from "../layouts/Layout.astro";
+
 ---
 
 <Layout title="services">
-    <h1>Hola esta es la pagina de servicios</h1>
+    <section class="sectionTittle">
+        <div class="hero-container">
+            <h1 class="hero-title">
+                Professional Remodeling Services
+            </h1>
+            <img src="../../src/assets/item1.jpg" alt="Decoración" class="floating-image image-1" />
+            <img src="../../src/assets/item2.jpg" alt="Decoración" class="floating-image image-2" />
+        </div>
+    </section>
+    <section>
+        <TabsNavegation />
+    </section>
+    <section>
+        <CtaAll />
+    </section>
 </Layout>
