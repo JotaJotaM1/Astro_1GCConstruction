@@ -1,5 +1,6 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
+
 const CtaAll = () => {
     return (
         <section>
@@ -19,9 +20,9 @@ const CtaAll = () => {
                     </div>
                     <div className="team-section">
                         <div className="team-images">
-                            <img src="/avatarOne.png" alt="Person 1" className="team-member one" />
-                            <img src="/avatarTwo.png" alt="Person 2" className="team-member two" />
-                            <img src="/avatarThree.png" alt="Person 3" className="team-member three" />
+                            <img src="../../src/assets/avatarOne.png" alt="Person 1" className="team-member one" />
+                            <img src="../../src/assets/avatarTwo.png" alt="Person 2" className="team-member two" />
+                            <img src="../../src/assets/avatarThree.png" alt="Person 3" className="team-member three" />
                         </div>
                         <h2>Shaping Spaces, Inspiring Futures</h2>
                     </div>

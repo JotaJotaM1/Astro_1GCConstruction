@@ -8,7 +8,7 @@ const Footer = () => {
             <div className='footer-grid'>
                 {/* Sección Logo y Nombre */}
                 <div className='cnt-logoName'>
-                    <img src='/Logotemporal.png' className='footer-logo' alt="Logo" />
+                    <img src="../../src/assets/Logotemporal.png" className='footer-logo' alt="Logo" />
                     <p className='textLogoFooter'>MiLogo</p>
                 </div>
 
