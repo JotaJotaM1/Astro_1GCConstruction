@@ -7,5 +7,4 @@ export default defineConfig({
 	integrations: [react()],
 	site: 'https://JotaJotaM1.github.io',
 	base: '/Astro_1GCConstruction',
-	output: 'static'
 });
