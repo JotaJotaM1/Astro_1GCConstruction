@@ -4,6 +4,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-	// Enable React to support React JSX components.
 	integrations: [react()],
+	site: 'https://JotaJotaM1.github.io',
+	base: '/Astro_1GCConstruction',
+	output: 'static'
 });
