@@ -1,6 +1,5 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-
 const CtaAll = () => {
     return (
         <section>
