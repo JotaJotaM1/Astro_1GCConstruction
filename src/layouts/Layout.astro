@@ -1,0 +1,31 @@
+---
+// src/layouts/Layout.astro
+import "bootstrap-icons/font/bootstrap-icons.css";
+import '../style/pages/reset.css';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Navbar client:load />
+    <main>
+      <slot />
+      <!-- Esto renderizará el contenido de cada página -->
+    </main>
+    <Footer client:load />
+  </body>
+</html>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+  body {
+    font-family: "Manrope", serif;
+  }
+</style>

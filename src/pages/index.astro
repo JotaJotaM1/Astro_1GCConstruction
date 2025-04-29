@@ -1,36 +1,209 @@
 ---
-// Component Imports
-import Counter from '../components/Counter';
-const someProps = {
-	count: 0,
-};
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+// src/pages/index.astro
+import CtaAll from '../components/CtaAll';
+import Steps from "../components/Steps";
+import "../style/pages/index.css";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<Counter {...someProps} client:visible>
-				<h1>Hello, React!</h1>
-			</Counter>
-		</main>
-	</body>
-</html>
+<Layout title="Home">
+  <!-- Section One -->
+  <section>
+    <div class="cnt-imgPortadaHome">
+      <figure class="cnt-imgPortada">
+        <img
+          class="portadaHome"
+          src="../../src/assets/portadaHome.jpg"
+          alt="Portada"
+        />
+        <div class="cnt-title">
+          <h1 class="titleHome">
+            Florida&rsquo;s Trusted Remodeling Contractor
+          </h1>
+          <p class="subtitleHome">Residential & Commercial Experts</p>
+        </div>
+        <a class="textCTAimgPorta">
+          Get Your Free Project Estimate
+          <i class="arrowImgPorta bi bi-arrow-right"></i>
+        </a>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Section Two -->
+
+  <section>
+    <div class="cnt-acordeonFather">
+        <div>
+            <h2 class="subTittleService">Top Residential & Commercial Remodeling Services in Florida</h2>
+        </div>
+        <div>
+        </div>
+        <div class="parent">
+            <div class="cnt-card">
+                <h2 class="tittleCardServices"><span class="NumCardService">01</span>Kitchen Remodeling</h2>
+                <figure>
+                    <img class="imgCardService" src="../../src/assets/remoKitchenHome.jpg"></img>
+                </figure>
+                <div class="cnt-tag">
+                    <span class="tagServices">
+                        palabra 1
+                    </span>
+                    <span class="tagServices">
+                        palabra 1.2
+                    </span>
+                </div>
+            </div>
+            <div class="cnt-card">
+                <h2 class="tittleCardServices"><span class="NumCardService">02</span>Bathroom Remodeling</h2>
+                <figure>
+                    <img class="imgCardService" src="../../src/assets/remoBathroomHome.jpg"></img>
+                </figure>
+                <div class="cnt-tag">
+                    <div class="tagServices">
+                        palabra 2
+                    </div>
+                    <div class="tagServices">
+                        palabra 2.2
+                    </div>
+                </div>
+            </div>
+            <div class="cnt-card">
+                <h2 class="tittleCardServices"><span class="NumCardService">03</span>Commercial Build-Outs</h2>
+                <figure>
+                    <img class="imgCardService" src="../../src/assets/remoComerHome.jpg"></img>
+                </figure>
+                <div class="cnt-tag">
+                    <div class="tagServices">
+                        palabra 3
+                    </div>
+                    <div class="tagServices">
+                        palabra 3.3
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Section Three -->
+
+  <section>
+    <div>
+      <h2 class="subTittleChoseUs">
+        Why Florida Trusts Us for Remodeling & Repairs
+      </h2>
+    </div>
+    <div>
+      <div class="parent2">
+        <div class="cnt-card2">
+          <figure class="icon-container">
+            <i class="iconUs bi bi-badge-3d-fill"></i>
+          </figure>
+          <h2 class="tittleCard2">3D Project Preview</h2>
+          <p class="textcard2">See your remodel digitally before we start</p>
+        </div>
+        <div class="cnt-card2">
+          <figure class="icon-container">
+            <i class="iconUs bi bi-camera2"></i>
+          </figure>
+          <h2 class="tittleCard2">Daily Photo Updates</h2>
+          <p class="textcard2">Track progress via our client portal</p>
+        </div>
+        <div class="cnt-card2">
+          <figure class="icon-container">
+            <i class="iconUs bi bi-wallet-fill"></i>
+          </figure>
+          <h2 class="tittleCard2">Open-Book Pricing</h2>
+          <p class="textcard2">
+            Hourly labor rates + material costs disclosed upfront
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="cntButton">
+      <a class="rutVideo" href="#">
+        <button class="btn-Hww btn-steps">
+          Schedule a Free Q&A Cal
+          <i class="arrowbtnHww bi bi-arrow-right"></i>
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section Four -->
+
+  <section>
+    <Steps />
+    <div class="cnt-btnStep">
+      <button class="btn-steps"
+        >Watch Our Process Video<i class="arrowbtnHww bi bi-arrow-right"
+        ></i></button
+      >
+    </div>
+  </section>
+
+    <!-- Section Four -->
+
+    <section>
+      <div class="cnt-fatherResorces">
+          <div>
+              <h2 class="tittleResorces">Essential Resources for Florida Homeowners</h2>
+          </div>
+          <div class="cnt-cardResorces">
+              <h2 class="titlle-cardResorces"><i class="iconrResorcesGuide bi bi-rulers"></i>2024 Remodeling Cost Guide</h2>
+              <p class="text-cardResorces">Florida Pricing per Sq.Ft - Kitchen, Bath & More</p>
+              <button class="btn-cardResorces">Download Free PDF</button>
+          </div>
+          <div class="cnt-cardResorces">
+              <h2 class="titlle-cardResorces"><i class="iconrResorcesList bi bi-check-square-fill"></i>Contractor Vetting Checklist</h2>
+              <p class="text-cardResorces">50 Red Flags to Avoid When Hiring</p>
+              <button class="btn-cardResorces">Get Checklist</button>
+          </div>
+          <div class="cnt-cardResorces">
+              <h2 class="titlle-cardResorces"><i class="iconrResorcesCalculate bi bi-bar-chart-line-fill"></i>2024 Remodeling Cost Guide</h2>
+              <p class="text-cardResorces">Estimate Your Project’s Value Increase</p>
+              <button class="btn-cardResorces">Calculate Now</button>
+          </div>
+      </div>
+  </section>
+
+    <!-- Section Six--> 
+
+    <section>
+      <div>
+        <div>
+          <h2 class="tittleTotalServi">Explore Our Services</h2>
+          <p class="textTotalServi">
+            Residential, commercial, and industrial clients trust our expertise to carry out construction and remodeling projects with exceptional results. We have a team of highly skilled professionals and a wide range of services to bring any project to life, from renovations to large-scale constructions.
+          </p>
+        </div>
+        <div class="cnt-linkServices">
+          <ul>
+            <li><a href="#">Architectural design and planning</a></li>
+            <li><a href="#">New construction projects</a></li>
+            <li><a href="#">Full home remodeling</a></li>
+            <li><a href="#">Additions and renovations</a></li>
+            <li><a href="#">Office and commercial space construction</a></li>
+            <li><a href="#">Facade remodeling</a></li>
+            <li><a href="#">Interior design and construction</a></li>
+            <li><a href="#">Electrical and plumbing installations</a></li>
+            <li><a href="#">Waterproofing and thermal insulation</a></li>
+            <li><a href="#">Pool and recreational area construction</a></li>
+            <li><a href="#">Flooring, finishes, and coatings</a></li>
+            <li><a href="#">Metal and concrete structures</a></li>
+            <li><a href="#">Custom carpentry and furniture</a></li>
+            <li><a href="#">Sustainable and energy-efficient construction</a></li>
+            <li><a href="#">Project management and supervision</a></li>
+            <li><a href="#">Construction consulting and advisory</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <CtaAll />
+    </section>
+
+</Layout>
