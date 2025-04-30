@@ -1,4 +1,6 @@
 ---
+import Acordeon from '../components/Acordeon.jsx';
+import AreasServed from "../components/AreasServed.jsx";
 import TabsNavegation from "../components/TabsNavegation";
 import CtaAll from '../components/CtaAll';
 import "../style/pages/services.css";
@@ -7,19 +9,29 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="services">
-    <section class="sectionTittle">
-        <div class="hero-container">
-            <h1 class="hero-title">
-                Professional Remodeling Services
-            </h1>
-            <img src="/images/item1.jpg" alt="Decoración" class="floating-image image-1" />
-            <img src="/images/item2.jpg" alt="Decoración" class="floating-image image-2" />
+    <section>
+        <div class="heroContainerH1">
+            <div class="cnt-Back-images">
+                <img src="/images/arquite2.jpg" alt="Background 1" class="background-image" />
+            </div>
+            <div class="hero-text">
+                <h1>Professional Remodeling Services</h1>
+            </div>
         </div>
     </section>
     <section>
         <TabsNavegation client:load />
     </section>
     <section>
-        <CtaAll />
+        <AreasServed client:load />
+    </section>
+    <section>
+        <Acordeon client:load />
+        <div class="cnt-btn-FAQ">
+            <button class="btn-ctaFAQ">Free Quote<i class="ArrowFreeCtaAcordeon bi bi-arrow-up-right"></i></button>
+        </div>
+    </section>
+    <section>
+        <CtaAll client:load />
     </section>
 </Layout>
