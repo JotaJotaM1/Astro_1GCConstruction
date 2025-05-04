@@ -14,7 +14,7 @@ const Navbar = () => {
             <nav className="navbar">
                 {/* Botón del menú hamburguesa */}
                 <button className="navbar-toggle" onClick={toggleMenu}>
-                    {isOpen ? '✕' : '☰'}
+                    {isOpen ? '\u2715' : '\u2630'}
                 </button>
 
                 {/* Menú desplegable */}

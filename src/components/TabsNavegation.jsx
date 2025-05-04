@@ -54,4 +54,4 @@ export default function ProjectsFilter() {
             </div>
         </div>
     );
-}
+};

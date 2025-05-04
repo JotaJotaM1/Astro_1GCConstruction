@@ -1,0 +1,161 @@
+[
+  {
+    "slug": "miami",
+    "name": "Miami",
+    "description": "Professional construction and renovation services in Miami-Dade County",
+    "services": [
+      "Residential remodeling",
+      "Commercial build-outs",
+      "Roofing",
+      "Permitting"
+    ],
+    "areas": ["Downtown", "Brickell", "Coral Gables", "Doral", "Miami Beach"]
+  },
+  {
+    "slug": "orlando",
+    "name": "Orlando",
+    "description": "Full-service construction solutions for Central Florida",
+    "services": [
+      "Theme park renovations",
+      "Hotel construction",
+      "Residential developments"
+    ],
+    "areas": [
+      "International Drive",
+      "Lake Buena Vista",
+      "Winter Park",
+      "Dr. Phillips"
+    ]
+  },
+  {
+    "slug": "tampa",
+    "name": "Tampa",
+    "description": "Construction services for the Tampa Bay area since 2005",
+    "services": [
+      "Waterfront construction",
+      "Historic renovations",
+      "Storm-proofing"
+    ],
+    "areas": ["Downtown", "Ybor City", "Hyde Park", "Westshore"]
+  },
+  {
+    "slug": "jacksonville",
+    "name": "Jacksonville",
+    "description": "Northeast Florida's premier construction company",
+    "services": ["Military housing", "Commercial roofing", "Foundation repair"],
+    "areas": ["Southside", "Riverside", "Beaches", "Downtown"]
+  },
+  {
+    "slug": "fort-lauderdale",
+    "name": "Fort Lauderdale",
+    "description": "Broward County construction specialists",
+    "services": [
+      "Luxury homes",
+      "Yacht dock construction",
+      "High-rise maintenance"
+    ],
+    "areas": ["Las Olas", "Wilton Manors", "Davie", "Plantation"]
+  },
+  {
+    "slug": "west-palm-beach",
+    "name": "West Palm Beach",
+    "description": "Palm Beach County construction services",
+    "services": [
+      "Hurricane retrofitting",
+      "Pools & outdoor living",
+      "Custom homes"
+    ],
+    "areas": ["Palm Beach", "Wellington", "Jupiter", "Royal Palm Beach"]
+  },
+  {
+    "slug": "naples",
+    "name": "Naples",
+    "description": "High-end construction for Southwest Florida",
+    "services": [
+      "Golf course communities",
+      "Luxury condos",
+      "Custom interiors"
+    ],
+    "areas": ["Marco Island", "Estero", "Bonita Springs", "Vanderbilt"]
+  },
+  {
+    "slug": "sarasota",
+    "name": "Sarasota",
+    "description": "Construction services for Sarasota and Manatee Counties",
+    "services": [
+      "Coastal construction",
+      "Retirement communities",
+      "Cultural venues"
+    ],
+    "areas": ["Siesta Key", "Lakewood Ranch", "Longboat Key", "Venice"]
+  },
+  {
+    "slug": "daytona-beach",
+    "name": "Daytona Beach",
+    "description": "Volusia County construction experts",
+    "services": [
+      "Beachfront properties",
+      "Motel renovations",
+      "Event facilities"
+    ],
+    "areas": ["Ormond Beach", "Port Orange", "New Smyrna", "Daytona Shores"]
+  },
+  {
+    "slug": "pensacola",
+    "name": "Pensacola",
+    "description": "Construction services for the Florida Panhandle",
+    "services": [
+      "Military base projects",
+      "Historic preservation",
+      "Storm damage repair"
+    ],
+    "areas": ["Gulf Breeze", "Perdido Key", "Navarre", "Milton"]
+  },
+  {
+    "slug": "tallahassee",
+    "name": "Tallahassee",
+    "description": "North Florida government and university construction specialists",
+    "services": [
+      "Educational facilities",
+      "Government buildings",
+      "Campus housing"
+    ],
+    "areas": ["FSU Area", "Midtown", "Southwood", "Killearn"]
+  },
+  {
+    "slug": "boca-raton",
+    "name": "Boca Raton",
+    "description": "Luxury construction in South Palm Beach County",
+    "services": ["Gated communities", "High-end retail", "Office build-outs"],
+    "areas": ["Deerfield Beach", "Delray Beach", "Highland Beach", "Boca West"]
+  },
+  {
+    "slug": "clearwater",
+    "name": "Clearwater",
+    "description": "Pinellas County construction services",
+    "services": ["Beach resorts", "Church renovations", "Senior living"],
+    "areas": ["Clearwater Beach", "Safety Harbor", "Dunedin", "Largo"]
+  },
+  {
+    "slug": "kissimmee",
+    "name": "Kissimmee",
+    "description": "Osceola County construction for vacation properties",
+    "services": [
+      "Vacation home builds",
+      "Rental property maintenance",
+      "Resort renovations"
+    ],
+    "areas": ["Celebration", "Four Corners", "Poinciana", "St. Cloud"]
+  },
+  {
+    "slug": "fort-myers",
+    "name": "Fort Myers",
+    "description": "Lee County construction and rebuilding services",
+    "services": [
+      "Post-hurricane reconstruction",
+      "Waterfront homes",
+      "Commercial plazas"
+    ],
+    "areas": ["Cape Coral", "Sanibel", "Estero", "Bonita Springs"]
+  }
+]

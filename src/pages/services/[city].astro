@@ -1,0 +1,42 @@
+---
+import ServiceTemplate from "../../components/ServiceTemplate.jsx";
+import cities from "../../data/cities.json"; 
+
+
+export async function getStaticPaths() {
+  return cities.map((city) => ({
+    params: { city: city.slug },
+    props: {
+      cityData: city,
+      state: "Florida",
+    },
+  }));
+}
+
+const { cityData, state } = Astro.props;
+
+const title = `Services in ${cityData.name}, ${state} | Your Company`;
+const canonicalUrl = `https://yourdomain.com/services/${cityData.slug}`;
+---
+
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <meta name="description" content={cityData.description} />
+    <link rel="canonical" href={canonicalUrl} />
+  </head>
+  <body>
+    <ServiceTemplate
+      client:load
+      cityData={cityData}
+      state={state}
+    />
+  </body>
+</html>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+  body {
+    font-family: "Manrope", serif;
+  }
+</style>
