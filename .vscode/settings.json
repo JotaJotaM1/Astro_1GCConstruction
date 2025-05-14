@@ -1,4 +1,4 @@
 {
     "diffEditor.renderSideBySide": false,
-    "editor.renderWhitespace": "none"
+    "editor.renderWhitespace": "all"
 }

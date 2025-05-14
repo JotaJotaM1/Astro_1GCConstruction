@@ -1,0 +1,73 @@
+---
+// src/pages/recursos/index.astro
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/Layout.astro";
+import PostsList from "../../components/PostsList.jsx";
+
+// Obtener todos los posts del blog
+const posts = (await getCollection("blog")).sort((a, b) => {
+  // Convertir fechas a timestamps (número) para la comparación
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+
+<BaseLayout title="Recursos - Blog">
+  <h1>Recursos y Artículos</h1>
+  <PostsList posts={posts} client:load />
+
+  <div class="posts-grid">
+    {
+      posts.map((post) => (
+        <article class="post-card">
+          <h2>
+            <a
+              href={`/recursos/${post.slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {post.data.title}
+            </a>
+          </h2>
+          <p>
+            <time>{new Date(post.data.date).toLocaleDateString()}</time>
+          </p>
+          <p>{post.data.description}</p>
+          <div class="tags">
+            {post.data.tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <style>
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .post-card {
+      padding: 1.5rem;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      transition: box-shadow 0.3s ease;
+    }
+    .post-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .tag {
+      background: #f0f0f0;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+  </style>
+</BaseLayout>

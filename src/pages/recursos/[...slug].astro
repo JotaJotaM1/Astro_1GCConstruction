@@ -1,0 +1,91 @@
+---
+// src/pages/recursos/[...slug].astro
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: {
+      post: {
+        data: post.data, // Pasamos los datos frontmatter
+        render: post.render, // Pasamos la función render
+      },
+    },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = post.render ? await post.render() : { Content: null };
+---
+
+<BaseLayout title={post.data.title || "Post sin título"}>
+  <article class="post-container">
+    <header class="post-header">
+      <h1>{post.data.title || "Post sin título"}</h1>
+      <div class="post-meta">
+        <time>
+          {
+            post.data.date
+              ? new Date(post.data.date).toLocaleDateString()
+              : "Fecha no disponible"
+          }
+        </time>
+        {
+          post.data.tags && (
+            <div class="tags">
+              {post.data.tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </header>
+
+    <div class="post-content">
+      {Content && <Content />}
+    </div>
+  </article>
+
+  <style>
+    /* Tus estilos permanecen igual */
+    .post-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .post-header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 1rem;
+    }
+    .post-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .post-content {
+      line-height: 1.6;
+    }
+    .post-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .tag {
+      background: #f0f0f0;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+  </style>
+</BaseLayout>
